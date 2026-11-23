@@ -1,15 +1,21 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -std=c99
 
-all: gcd
+all: gcd invariant
 
 gcd: gcd.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+invariant: invariant.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 run: gcd
 	./gcd
 
-clean:
-	rm -f gcd
+check: invariant
+	./invariant
 
-.PHONY: all run clean
+clean:
+	rm -f gcd invariant
+
+.PHONY: all run check clean

@@ -16,9 +16,14 @@ Pascalのサンプルコードを、C言語に書き直したものです。
 - `gcd_repeat`: repeat ... until 版（Pascalらしい書き方。Cでは do-while）
 - `gcd_rec`: 再帰版（変数 r が不要）
 
+`chapter01/notes-1.1.md` — 1.1「アルゴリズムの正しさ」のまとめ（復習問題1.1）
+
+`chapter01/invariant.c` — ループ不変条件を `assert` で確かめる実験（互除法・階乗）
+
 ## ビルドと実行
 
 ```sh
 cd chapter01
-make run
+make run    # gcd.c
+make check  # invariant.c
 ```
