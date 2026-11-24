@@ -20,10 +20,13 @@ Pascalのサンプルコードを、C言語に書き直したものです。
 
 `chapter01/invariant.c` — ループ不変条件を `assert` で確かめる実験（互除法・階乗）
 
+`chapter01/factorial.c` — 階乗（演習問題1.1）の for 文版と while 文版
+
 ## ビルドと実行
 
 ```sh
 cd chapter01
 make run    # gcd.c
 make check  # invariant.c
+make fact   # factorial.c
 ```

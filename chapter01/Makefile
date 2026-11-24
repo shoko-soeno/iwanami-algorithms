@@ -1,12 +1,15 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -std=c99
 
-all: gcd invariant
+all: gcd invariant factorial
 
 gcd: gcd.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 invariant: invariant.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+factorial: factorial.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 run: gcd
@@ -15,7 +18,10 @@ run: gcd
 check: invariant
 	./invariant
 
-clean:
-	rm -f gcd invariant
+fact: factorial
+	./factorial
 
-.PHONY: all run check clean
+clean:
+	rm -f gcd invariant factorial
+
+.PHONY: all run check fact clean

@@ -2,3 +2,4 @@ gcd
 *.o
 a.out
 invariant
+factorial
